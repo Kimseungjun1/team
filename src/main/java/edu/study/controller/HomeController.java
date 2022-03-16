@@ -45,6 +45,34 @@ public class HomeController {
 		return "login/login";
 	}
 	
+	@RequestMapping(value = "/home1.do", method = RequestMethod.GET)
+	public String home1(Locale locale, Model model) {
+		logger.info("Good by home! The client locale is {}.", locale);
+		
+		
+		
+		return "home";
+	}
+
+	@RequestMapping(value = "/location/list.do", method = RequestMethod.GET)
+	public String location(Locale locale, Model model) {
+		
+		
+		
+		
+		return "location/list";
+	}
+	
+	@RequestMapping(value = "/member/create.do", method = RequestMethod.GET)
+	public String create(Locale locale, Model model) {
+		
+		
+		
+		
+		return "member/create";
+	}
+	
+	
 	
 	
 }

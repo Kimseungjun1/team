@@ -96,6 +96,7 @@ public class BoardController {
 		return "redirect:view.do?bidx="+vo.getBidx();
 	}
 	
+		
 	
 	
 }

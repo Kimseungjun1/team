@@ -10,9 +10,9 @@
         	 , subject
         	 , content
         	 , writer
-        	 , writday
+        	 , writeday
         	 
-          FROM board
+          FROM board1
           WHERE delyn != 'Y'
           <if test="sarchType != null and sarchType.equals('subject')">
           and subject like '%'||#{sarchValue}||'%' 
@@ -31,15 +31,15 @@
     	 SELECT bidx
         	 , subject
         	 , content
-        	 , writday
+        	 , writeday
         	 
-          FROM board
+          FROM board1
           WHERE bidx= #{bidx}
           
     </select>
     
     <update id="updateBoard" parameterType="boardVO">
-    	UPDATE board
+    	UPDATE board1
     	   SET subject = #{subject}
     	       ,content = #{content}
     	WHERE bidx = #{bidx} 
@@ -47,7 +47,7 @@
     </update>
     
     <update id="deleteBoard" parameterType="int">
-    	UPDATE board
+    	UPDATE board1
     	   SET delyn = 'Y'
     	WHERE bidx = #{bidx} 
     	    
@@ -56,26 +56,26 @@
     <insert id="insertBoard" parameterType="boardVO">
 		<![CDATA[
 		INSERT INTO 
-					board(
+					board1(
 					 bidx
 					,subject
 					,content
 					,writer
-					,writday
+					,writeday
 					,midx
 					)
 			VALUES(
 					BIDX_SEQ.nextval
 					,#{subject}
 					,#{content}
-					,'테스터'
+					,'테스터' 
 					,SYSDATE
 					,1)
 		    	
     ]]>
     
     <selectKey resultType="integer" keyProperty="bidx" order="AFTER"> <!--order = AFTER BEFORE-->
-    	SELECT MAX(bidx) FROM board    
+    	SELECT MAX(bidx) FROM board1
     </selectKey>
         
     </insert>

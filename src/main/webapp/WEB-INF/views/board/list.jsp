@@ -46,7 +46,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
-	
+	<button onclick="location.href='../home1.do'">뒤로가기</button>
 	<button onclick="location.href='register.do'">등록</button>
 
 </body>
