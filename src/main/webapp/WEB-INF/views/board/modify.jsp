@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ 
 	<h2>게시글 수정</h2>
 	<form action = "modify.do" method="post">
 	<input type="hidden" name="bidx" value="${vo.bidx}">

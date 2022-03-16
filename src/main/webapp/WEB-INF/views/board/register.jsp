@@ -11,7 +11,7 @@
 
 	<h2>게시글 등록</h2>
 	<form action = "register.do" method="post">
-	<table border="1">
+	<table border="1">  
 		<tbody>
 			
 			<tr>
