@@ -3,10 +3,10 @@ package edu.study.vo;
 public class BoardVO {
 
 	private int bidx;
-	private String subject;
-	private String content;
-	private String writer;
-	private String writeday;
+	private String bsubject;
+	private String bcontent;
+	private String bwriter;
+	private String bwdate;
 	
 	
 	
@@ -17,29 +17,29 @@ public class BoardVO {
 	public void setBidx(int bidx) {
 		this.bidx = bidx;
 	}
-	public String getSubject() {
-		return subject;
+	public String getbsubject() {
+		return bsubject;
 	}
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setbsubject(String bsubject) {
+		this.bsubject = bsubject;
 	}
-	public String getContent() {
-		return content;
+	public String getbcontent() {
+		return bcontent;
 	}
-	public void setContent(String content) {
-		this.content = content;
+	public void setbcontent(String bcontent) {
+		this.bcontent = bcontent;
 	}	
-	public String getWriter() {
-		return writer;
+	public String getbwriter() {
+		return bwriter;
 	}
-	public void setWriter(String writer) {
-		this.writer = writer;
+	public void setbwriter(String bwriter) {
+		this.bwriter = bwriter;
 	}
-	public String getWriteday() {
-		return writeday;
+	public String getbwdate() {
+		return bwdate;
 	}
-	public void setWriteday(String writeday) {
-		this.writeday = writeday;
+	public void setbwdate(String bwdate) {
+		this.bwdate = bwdate;
 	}
 	
 	

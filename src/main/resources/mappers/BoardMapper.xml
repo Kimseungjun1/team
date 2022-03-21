@@ -7,20 +7,20 @@
 
      <select id="listBoard" resultType="boardVO">
          SELECT bidx
-        	 , subject
-        	 , content
-        	 , writer
-        	 , writeday
+        	 , bsubject
+        	 , bcontent
+        	 , bwriter
+        	 , bwdate
         	 
-          FROM board1
-          WHERE delyn != 'Y'
+          FROM board
+          WHERE delny != 'Y'
           <if test="sarchType != null and sarchType.equals('subject')">
           and subject like '%'||#{sarchValue}||'%' 
           
           
           </if>
           <if test="sarchType != null and sarchType.equals('writer')">
-          and writer like '%'||#{sarchValue}||'%'
+          and bwriter like '%'||#{sarchValue}||'%'
           </if>
           
           order by bidx asc
@@ -29,26 +29,27 @@
     
     <select id="detailBoard" resultType="boardVO" parameterType="int">
     	 SELECT bidx
-        	 , subject
-        	 , content
-        	 , writeday
+        	 , bsubject
+        	 , bcontent
+        	 , bwriter
+        	 , bwdate
         	 
-          FROM board1
+          FROM board
           WHERE bidx= #{bidx}
           
     </select>
     
     <update id="updateBoard" parameterType="boardVO">
-    	UPDATE board1
-    	   SET subject = #{subject}
-    	       ,content = #{content}
+    	UPDATE board
+    	   SET bsubject = #{bsubject}
+    	       ,bcontent = #{bcontent}
     	WHERE bidx = #{bidx} 
     
     </update>
     
     <update id="deleteBoard" parameterType="int">
-    	UPDATE board1
-    	   SET delyn = 'Y'
+    	UPDATE board
+    	   SET delny = 'Y'
     	WHERE bidx = #{bidx} 
     	    
     </update>
@@ -56,18 +57,18 @@
     <insert id="insertBoard" parameterType="boardVO">
 		<![CDATA[
 		INSERT INTO 
-					board1(
+					board(
 					 bidx
-					,subject
-					,content
-					,writer
-					,writeday
+					,bsubject
+					,bcontent
+					,bwriter
+					,bwdate
 					,midx
 					)
 			VALUES(
 					BIDX_SEQ.nextval
-					,#{subject}
-					,#{content}
+					,#{bsubject}
+					,#{bcontent}
 					,'테스터' 
 					,SYSDATE
 					,1)
@@ -75,7 +76,7 @@
     ]]>
     
     <selectKey resultType="integer" keyProperty="bidx" order="AFTER"> <!--order = AFTER BEFORE-->
-    	SELECT MAX(bidx) FROM board1
+    	SELECT MAX(bidx) FROM board
     </selectKey>
         
     </insert>
