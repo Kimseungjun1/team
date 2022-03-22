@@ -40,17 +40,23 @@ public class LocationController {
 	
 	
 	
-	/*
-	 * @RequestMapping(value = "/view.do", method = RequestMethod.GET) public String
-	 * view(Locale locale, Model model, int bidx) throws Exception {
-	 * 
-	 * BoardVO vo = boardService.detail(bidx);
-	 * 
-	 * model.addAttribute("vo",vo);
-	 * 
-	 * 
-	 * return "board/view"; }
-	 * 
+	
+	  @RequestMapping(value = "/view.do", method = RequestMethod.GET) public String
+	  view(Locale locale, Model model) throws Exception {
+	  
+			/*
+			 * LocationVO vo = locationService.detail(lidx);
+			 * 
+			 * model.addAttribute("vo",vo);
+			 */
+	  
+	 
+	  return "location/view"; 
+	  
+	  }
+	  
+	  
+	/* 
 	 * @RequestMapping(value = "/modify.do", method = RequestMethod.GET) public
 	 * String modify(Locale locale, Model model, int bidx) throws Exception {
 	 * 

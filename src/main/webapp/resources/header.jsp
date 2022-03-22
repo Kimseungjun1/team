@@ -1,12 +1,16 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+
+
 
 
 
 	
 
   
-	  <header class="py-3 mb-4 border-bottom">
+	  <header class="py-3 mb-4 bor	der-bottom">
 	    <div class="container d-flex flex-wrap justify-content-center">
 	      <a href="/controller/home1.do" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
 	        <svg class="bi me-2" width="40" height="32"></svg>
@@ -34,7 +38,7 @@
 	      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 		            
 				            <li><hr class="dropdown-divider">-ㄱ-</li>
-				            <li><a class="dropdown-item" href="#">고창군</a></li>
+				            <li><a class="dropdown-item" href="/controller/location/view.do">고창군</a></li>
 				            <li><a class="dropdown-item" href="#">군산시</a></li>
 				            
 				            <li><hr class="dropdown-divider">-ㄴ-</li>

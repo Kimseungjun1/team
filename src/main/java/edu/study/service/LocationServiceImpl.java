@@ -23,7 +23,13 @@ public class LocationServiceImpl implements LocationService {
 		return list;
 	}
 
-	
+	@Override
+	public LocationVO detail(int lidx) throws Exception {
+		// TODO Auto-generated method stub
+		
+		return locationDao.detail(lidx);
+	}
+		
 	
 
 }

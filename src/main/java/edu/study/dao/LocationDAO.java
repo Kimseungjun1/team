@@ -22,6 +22,10 @@ public class LocationDAO {
 		return sqlSession.selectList(Namespace+".listLocation", vo);
 	}
 	
+	public LocationVO detail(int lidx) throws Exception{
+		return sqlSession.selectOne(Namespace+"detailLocation", lidx);
+	}
+	
 	
 	
 	

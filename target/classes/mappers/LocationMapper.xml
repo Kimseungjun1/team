@@ -16,4 +16,16 @@
 	
 	</select>
 	
+	<select id="detailBoard" resultType="locationVO" parameterType="int">
+    	 SELECT lidx
+        	 , lregion
+        	 , lcontent
+        	 , limage
+        	 
+        	 
+          FROM LCT
+          WHERE lidx= #{lidx}
+          
+    </select>
+	
 </mapper>
