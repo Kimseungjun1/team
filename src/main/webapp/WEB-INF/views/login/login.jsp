@@ -21,45 +21,56 @@
 		</div>
 		
 		
-		<div id="frmlogin">
-		<form action = "loginOk.jsp" method="post">
-			<p>
-				<label>
-					아이디 : <input type="text" name="mid">
-				</label>
-			</p>
-		
-			<p>
-				<label>
-					비밀번호 : <input type="password" name="mpwd">
-				</label>
-			</p>
+		<div class="modal modal-signin position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalSignin">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content rounded-5 shadow">
+			      <div class="modal-header p-5 pb-4 border-bottom-0">
+			        <!-- <h5 class="modal-title">Modal title</h5> -->
+			        <h2 class="fw-bold mb-0">로그인</h2>
+			        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="location.href='/controller/home1.do'"></button>
+			      </div>
 			
-			<p>
-				<label>
-					<a href="#">아이디 찾기</a>
-					<a href="#">비밀번호 찾기</a>
-					<a href="member/create.do">회원가입</a>
-				</label>
-			</p>
-			
-			<div class="d-grid gap-2 col-6 mx-auto">
-	  		
-	  			<button class="btn btn-primary" type="submit">로그인</button>
-	  		
+			      <div class="modal-body p-5 pt-0">
+			        <form class="">
+			          <div class="form-floating mb-3">
+			            <input type="ip" class="form-control rounded-4" id="floatingInput" placeholder="아이디를 입력해 주세요..">
+			            <label for="floatingInput">아이디</label>
+			          </div>
+			          <div class="form-floating mb-3">
+			            <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="비밀번호">
+			            <label for="floatingPassword">비밀번호</label>
+			          </div>
+			          <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+			        <small class="text-muted">
+			        	<a href="#">아이디 찾기</a>
+						<a href="#">비밀번호 찾기</a>
+						<a href="member/create.do">회원가입</a>
+					</small>
+			          <hr class="my-4">
+			          <h2 class="fs-5 fw-bold mb-3">간편가입</h2>
+			          <button class="w-100 py-2 mb-2 btn btn-outline-dark rounded-4" type="submit">
+			            <svg class="bi me-1" width="16" height="16"><use xlink:href="#twitter"/></svg>
+			            Sign up with Twitter
+			          </button>
+			          <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-4" type="submit">
+			            <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"/></svg>
+			            Sign up with Facebook
+			          </button>
+			          <button class="w-100 py-2 mb-2 btn btn-outline-secondary rounded-4" type="submit">
+			            <svg class="bi me-1" width="16" height="16"><use xlink:href="#github"/></svg>
+			            Sign up with GitHub
+			          </button>
+			        </form>
+			      </div>
+			    </div>
+			  </div>
 			</div>
-		
-		</form>
-		<hr>
-		
-		
-		
-		
-		</div>
 	
 	</div>
 			
 	</section>
-
+	
+	<%@ include file = "/resources/footer.jsp" %>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

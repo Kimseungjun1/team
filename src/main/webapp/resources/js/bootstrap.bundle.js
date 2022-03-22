@@ -2697,7 +2697,7 @@
   reference element's position.
   */
 
-  function listScrollParents(element, list) {
+  function listScrollParents(element, list) { 
     var _element$ownerDocumen;
 
     if (list === void 0) {
